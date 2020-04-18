@@ -95,7 +95,16 @@ th {
   background-color:lightblue;
 }
 
-.btn{
+.inline{
+	display: inline-block;
+}
+
+.btn-primary {
+	background-color: lightblue;
+    border-color: lightblue;
+}
+
+.btn-img{
   position: absolute;
   transform: translate(-79%, 0%);
   -ms-transform: translate(-50%, -50%);
