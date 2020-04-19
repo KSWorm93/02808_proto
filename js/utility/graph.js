@@ -7,14 +7,20 @@ function getDisplayedWeekNum() {
 
 function toggleHeadache(toggle = false) {
 	document.getElementById('headBtn').disabled = toggle;
+	translateGraph();
+}
+
+function graphVisible() {
+	var ctx = document.getElementById('headacheChart');
+	var visible = ctx.classList.contains('chartCreated') ? true : false;
+	return visible;
 }
 
 function renderGraph(data, translations = false) {
-	var ctx = document.getElementById('headacheChart');
-
-	if (ctx.classList.contains('chartCreated')) {
+	if (graphVisible()) {
 		update(translations);
 	} else {
+		var ctx = document.getElementById('headacheChart');
 		create();
 		ctx.classList.add('chartCreated');
 		document.getElementById('weekButtons').removeAttribute('hidden');

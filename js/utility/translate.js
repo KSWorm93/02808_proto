@@ -6,13 +6,16 @@ function getText(text, locale = currentLocale) {
 
 function translateHTML() {
 	document.getElementById('welcomeText').innerHTML = getText('welcomeText');
-	document.getElementById('forwardBtn').innerHTML = getText('forwardBtn');
-	document.getElementById('backBtn').innerHTML = getText('backBtn');
-	document.getElementById('weekText').innerHTML = getText('weekText') + getDisplayedWeekNum();
-	translateGraph();
+	
+	if(graphVisible()) {
+		translateGraph();
+	}
 }
 
 function translateGraph() {
+	document.getElementById('forwardBtn').innerHTML = getText('forwardBtn');
+	document.getElementById('backBtn').innerHTML = getText('backBtn');
+	document.getElementById('weekText').innerHTML = getText('weekText') + getDisplayedWeekNum();
 	var translations = {
 		week: [
 			getText('monday'),
