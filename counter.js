@@ -1,6 +1,12 @@
 
 $(document).ready(function(){
   calcWeekTotalHeadache();
+
+  moment.locale('en', {
+    week: {
+      dow: 1
+    }
+  })
 })
 
 //Clickers
@@ -55,7 +61,7 @@ function calcWeekTotalHeadache() {
   var data = getDataFromStorage(week);
 
   var weekTotal = 0;
-  for (let index = 0; index < data.length; index++) {
+  for (var index = 0; index < data.length; index++) {
     weekTotal += data[index];
   } 
 
@@ -143,6 +149,27 @@ function initWeekData() {
 
   return JSON.stringify(weekData);
 }
+
+//CSV
+
+function generateCSV() {
+
+  const header = 'week,monday,tuesday,wednesday,thursday,friday,saturday,sunday'
+  const newline = '/n'
+
+  //TODO - loop week localstorage
+  //TODO - add to single text string
+  //TODO - create file
+  //TODO - download file
+
+}
+
+//Admin
+
+//TODO - change locale, localstorage with locale specific info
+  //TODO - add locale in moment
+  //Change text to danish
+//TODO - clear all week storage
 
 //Graph
 var headacheChart; //Global variable to store the chart
