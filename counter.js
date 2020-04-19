@@ -57,6 +57,7 @@ function changeWeek(back) {
   calcWeekTotalHeadache(storageWeek);
   
   toggleHeadache(week != moment().week());
+  //TODO - test
 }
 
 function toggleHeadache(toggle = false) {
