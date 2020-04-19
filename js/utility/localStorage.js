@@ -96,3 +96,15 @@ function initWeekData() {
 function clearLocalStorage() {
 	localStorage.clear();
 }
+
+function getLocalePreference(defaultLocale = 'en'){
+	var localePref = localStorage.getItem('locale');
+	if(localePref) {
+		return localePref;
+	} 
+	return defaultLocale;
+}
+
+function saveLocalePreference(locale) {
+	localStorage.setItem('locale', locale);
+}

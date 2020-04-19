@@ -13,6 +13,7 @@ function setLocale(locale,
 	currentLocale = locale;
 	moment.updateLocale(locale, options);
 	translateHTML();
+	saveLocalePreference(locale);
 }
 
 function clearLocalData() {

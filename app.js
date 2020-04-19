@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
-	setLocale('da');
-	//TODO - save preference in localstorage and check there first
+	var locale = getLocalePreference('da'); //Change default locale here
+	setLocale(locale);
 	calcWeekTotalHeadache();
 })
 
