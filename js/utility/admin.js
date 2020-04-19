@@ -1,7 +1,3 @@
-//Admin
-
-//TODO - change locale, localstorage with locale specific info
-//TODO - clear all week storage
 
 function setLocale(locale,
 	options = {
