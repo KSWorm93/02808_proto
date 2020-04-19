@@ -1,0 +1,21 @@
+const englishLocale = {
+    welcomeText: 'Welcome to MigraiNo!',
+    weekText: 'Week: ',
+    graphText: 'Times you had headache',
+    monday: 'Monday',
+    tuesday: 'Tuesday',
+    wednesday: 'Wednesday',
+    thursday: 'Thursday',
+    friday: 'Friday',
+    saturday: 'Saturday',
+    sunday: 'Sunday',
+    forwardBtn: 'Next week',
+    backBtn: 'Last week',
+    confirmBodyText: 'Are you sure you wish to delete all your data? There is no way back',
+    confirmTitleText: 'Delete your data',
+    yes: 'Yes',
+    cancel: 'Cancel',
+    close: 'Close',
+    deletedTitleText: 'Success',
+    deletedBodyText: 'All your data have been deleted'
+}

@@ -1,0 +1,21 @@
+const danishLocale = {
+    welcomeText: 'Velkommen til MigraiNo!',
+    weekText: 'Uge: ',
+    graphText: 'Tilfælde hvor du har haft hovedpine',
+    monday: 'Mandag',
+    tuesday: 'Tirsdag',
+    wednesday: 'Onsdag',
+    thursday: 'Torsdag',
+    friday: 'Fredag',
+    saturday: 'Lørdag',
+    sunday: 'Søndag',
+    forwardBtn: 'Næste uge',
+    backBtn: 'Forrige uge',
+    confirmBodyText: 'Er du sikker på du vil slette alt din data? Der er ingen vej tilbage',
+    confirmTitleText: 'Slet din data',
+    yes: 'Ja',
+    cancel: 'Fortryd',
+    close: 'Luk',
+    deletedTitleText: 'Success',
+    deletedBodyText: 'Alt dit data er nu slettet'
+}

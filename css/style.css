@@ -95,7 +95,26 @@ th {
   background-color:lightblue;
 }
 
-.btn{
+.locale {
+	padding-top: 30px;
+	position: absolute;
+}
+
+.locale img {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.inline {
+	display: inline-block;
+}
+
+.btn-primary {
+	background-color: lightblue;
+    border-color: lightblue;
+}
+
+.btn-img{
   position: absolute;
   transform: translate(-79%, 0%);
   -ms-transform: translate(-50%, -50%);
