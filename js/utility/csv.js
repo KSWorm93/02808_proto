@@ -13,7 +13,7 @@ function generateCSV() {
 	}
 
 	var fileName = getFileName();
-	downloadCSVFile(fileName, data);
+	downloadCSVFile(fileName, csv);
 }
 
 function downloadCSVFile(fileName, data) {
