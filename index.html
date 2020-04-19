@@ -2,129 +2,136 @@
 <html lang="zxx">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Gutim Template">
-    <meta name="keywords" content="Gutim, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gutim | Template</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Gutim Template">
+	<meta name="keywords" content="Gutim, unica, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Gutim | Template</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
+		rel="stylesheet">
 
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+	<!-- Css Styles -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+	<link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
 <body style="background-color:LIGHTCYAN;">
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
-	
-    <!-- Header Section Begin -->
-    <header class="header-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="logo" align="center">
-                        <a href="./index.html">
-                            <img src="img/logo.png" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- Header End -->
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
 
-    <!-- Hero Section Begin -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="hero-text">
-                        <p id="welcomeText">Welcome to MigraNo!<br></p>
-                    </div>
-					
+	<!-- Header Section Begin -->
+	<header class="header-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="locale">
+						<img src="img/denmark.png" height=20px width=20px onclick="setLocale('da')">
+						<img src="img/uk.png" height=20px width=20px onclick="setLocale('en')">
+					</div>
+					<div class="logo" align="center">
+						<a href="./index.html">
+							<img src="img/logo.png" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Header End -->
+
+	<!-- Hero Section Begin -->
+	<section class="hero-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="hero-text">
+						<p id="welcomeText">Welcome to MigraNo!<br></p>
+					</div>
+
 					<table align="center">
 						<tr>
 							<th>
-                                <img src="img/waterglass.png" alt="" border=3 height=80px width=50px></img>
-                                <button class="btn btn-img" type="button" onClick="clickMeWater()">Glass</button>
-                            </th>
+								<img src="img/waterglass.png" alt="" border=3 height=80px width=50px></img>
+								<button class="btn btn-img" type="button" onClick="clickMeWater()">Glass</button>
+							</th>
 							<td><a id="clicksWater">0</a></td>
 						</tr>
 					</table>
-					<br/>
+					<br />
 					<table align="center">
 						<tr>
 							<th>
-                                <img src="img/head.png" alt="" border=3 height=80px width=50px></img>
-                                <button id="headBtn" class="btn btn-img" type="button" onClick="clickMeHead()">Ache</button>
-                            </th>
+								<img src="img/head.png" alt="" border=3 height=80px width=50px></img>
+								<button id="headBtn" class="btn btn-img" type="button"
+									onClick="clickMeHead()">Ache</button>
+							</th>
 							<td><a id="clicksHead">0</a></td>
 						</tr>
 					</table>
-					<br/>
-					<br/>
-					
+					<br />
+					<br />
+
 					<table align="center" border="1">
-                        <tr>
-                            <th>
-                                <img src="img/log.png" alt="" border=3 height=40px width=40px></img>
-                                <button class="btn btn-img" type="button" onClick="clickMeGraph()">Graph</button>
-                            </th>
-                            <th>
-                                <img src="img/csv.png" alt="" border=3 height=40px width=40px></img>
-                                <button class="btn btn-img" type="button" onClick="generateCSV()">Download</button>
-                            </th>
-                        </tr>
-                    </table>
-                    
-                    <br/>
+						<tr>
+							<th>
+								<img src="img/log.png" alt="" border=3 height=40px width=40px></img>
+								<button class="btn btn-img" type="button" onClick="clickMeGraph()">Graph</button>
+							</th>
+							<th>
+								<img src="img/csv.png" alt="" border=3 height=40px width=40px></img>
+								<button class="btn btn-img" type="button" onClick="generateCSV()">Download</button>
+							</th>
+						</tr>
+					</table>
 
-                    <div align="center" id="weekButtons" hidden>
-                        <button class="btn btn-primary inline" type="button" onClick="changeWeek(true)">Last week</button>
-                        <p id="weekText" class="inline">CurrentWeek</p>
-                        <button class="btn btn-primary inline" type="button" onClick="changeWeek(false)">Next week</button>
-                    </div>
-                    <canvas id="headacheChart" width="400" height="400"></canvas>
+					<br />
 
-					<br/>
-					<br/>
-					<br/>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Hero Section End -->
+					<div align="center" id="weekButtons" hidden>
+						<button id="backBtn" class="btn btn-primary inline" type="button"
+							onClick="changeWeek(true)">Last week</button>
+						<p id="weekText" class="inline">CurrentWeek</p>
+						<button id="forwardBtn" class="btn btn-primary inline" type="button"
+							onClick="changeWeek(false)">Next week</button>
+					</div>
+					<canvas id="headacheChart" width="400" height="400"></canvas>
 
-    <!-- Js Plugins -->
-    <!-- lib -->
-    <script src="js/lib/jquery-3.3.1.min.js"></script>
-    <script src="js/lib/bootstrap.min.js"></script>
-    <script src="js/lib/jquery.magnific-popup.min.js"></script>
-    <script src="js/lib/mixitup.min.js"></script>
-    <script src="js/lib/jquery.slicknav.js"></script>
-    <script src="js/lib/owl.carousel.min.js"></script>
-    <script src="js/lib/momentjs.min.js"></script>
-    <script src="js/lib/chart.bundle.min.js"></script>
-    <!-- JS -->
-    <script src="js/main.js"></script>
-    <script src="app.js" type="text/javascript"></script>
-    <script src="js/utility/globals.js" type="text/javascript"></script>
-    <script src="js/utility/translate.js" type="text/javascript"></script>
-    <script src="js/utility/admin.js" type="text/javascript"></script>
-    <script src="js/utility/localStorage.js" type="text/javascript"></script>
-    <script src="js/utility/graph.js" type="text/javascript"></script>
-    <script src="js/utility/csv.js" type="text/javascript"></script>
+					<br />
+					<br />
+					<br />
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Hero Section End -->
+
+	<!-- Js Plugins -->
+	<!-- lib -->
+	<script src="js/lib/jquery-3.3.1.min.js"></script>
+	<script src="js/lib/bootstrap.min.js"></script>
+	<script src="js/lib/jquery.magnific-popup.min.js"></script>
+	<script src="js/lib/mixitup.min.js"></script>
+	<script src="js/lib/jquery.slicknav.js"></script>
+	<script src="js/lib/owl.carousel.min.js"></script>
+	<script src="js/lib/momentjs.min.js"></script>
+	<script src="js/lib/chart.bundle.min.js"></script>
+	<!-- JS -->
+	<script src="js/main.js"></script>
+	<script src="app.js" type="text/javascript"></script>
+	<script src="js/utility/globals.js" type="text/javascript"></script>
+	<script src="js/utility/translate.js" type="text/javascript"></script>
+	<script src="js/utility/admin.js" type="text/javascript"></script>
+	<script src="js/utility/localStorage.js" type="text/javascript"></script>
+	<script src="js/utility/graph.js" type="text/javascript"></script>
+	<script src="js/utility/csv.js" type="text/javascript"></script>
 </body>
 
 </html>

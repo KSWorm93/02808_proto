@@ -95,7 +95,12 @@ th {
   background-color:lightblue;
 }
 
-.inline{
+.locale {
+	padding-top: 30px;
+	position: absolute;
+}
+
+.inline {
 	display: inline-block;
 }
 
