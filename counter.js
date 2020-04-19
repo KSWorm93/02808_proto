@@ -1,5 +1,10 @@
 
 $(document).ready(function(){
+  moment.updateLocale('en', {
+    week: {
+      dow: 1
+    }
+  })
   calcWeekTotalHeadache();
 })
 
@@ -25,33 +30,43 @@ function clickMeGraph() {
   var data = getDataFromStorage(week);
   document.getElementById('weekText').innerHTML = 'Week ' + momentWeek;
   createGraph(data);
+  calcWeekTotalHeadache(week);
+  toggleHeadache();
 }
 
 function changeWeek(back) {
-  var displayedWeek = document.getElementById('weekText').innerHTML;
-  displayedWeek = parseInt(displayedWeek.split(' ')[1]);
+  var week = document.getElementById('weekText').innerHTML;
+  week = parseInt(week.split(' ')[1]);
 
   if(back) {
-    if(displayedWeek < 2) {
+    if(week < 2) {
       return;
     }
-    displayedWeek -= 1;
+    week -= 1;
   } else {
-    if(displayedWeek > 51) {
+    if(week > 51) {
       return
     }
-    displayedWeek += 1;
+    week += 1;
   }
 
-  var data = getDataFromStorage('week-' + displayedWeek);
+  var storageWeek = 'week-' + week;
+  var data = getDataFromStorage(storageWeek);
   createGraph(data);
-  document.getElementById('weekText').innerHTML = 'Week ' + displayedWeek;
+  document.getElementById('weekText').innerHTML = 'Week ' + week;
+  calcWeekTotalHeadache(storageWeek);
+  
+  toggleHeadache(week != moment().week());
+}
+
+function toggleHeadache(toggle = false) {
+  document.getElementById('headBtn').disabled = toggle;
 }
 
 //Local storage
 
-function calcWeekTotalHeadache() {
-  var week = 'week-' + moment().week();
+function calcWeekTotalHeadache(week = false) {
+  var week = week ? week : 'week-' + moment().week();
   var data = getDataFromStorage(week);
 
   var weekTotal = 0;
@@ -143,6 +158,39 @@ function initWeekData() {
 
   return JSON.stringify(weekData);
 }
+
+//CSV
+
+function generateCSV() {
+
+  var header = 'week,monday,tuesday,wednesday,thursday,friday,saturday,sunday'
+  var newline = '/n'
+  var csvString = header + newline;
+
+
+  //Loop 52 times to get each week a year
+  for (var index = 1; index < 53; index++) {
+    var weekData = getDataFromStorage('week-' + index);
+    if(weekData) {
+      csvString = csvString.concat(weekData.toString(), newline);
+    }
+  }
+
+
+
+  //TODO - loop week localstorage
+  //TODO - add to single text string
+  //TODO - create file
+  //TODO - download file
+
+}
+
+//Admin
+
+//TODO - change locale, localstorage with locale specific info
+  //TODO - add locale in moment
+  //Change text to danish
+//TODO - clear all week storage
 
 //Graph
 var headacheChart; //Global variable to store the chart
