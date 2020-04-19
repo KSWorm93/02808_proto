@@ -13,7 +13,7 @@ function renderGraph(data, translations = false) {
 	var ctx = document.getElementById('headacheChart');
 
 	if (ctx.classList.contains('chartCreated')) {
-		update(options);
+		update(translations);
 	} else {
 		create();
 		ctx.classList.add('chartCreated');
@@ -23,7 +23,10 @@ function renderGraph(data, translations = false) {
 
 	function update(translations) {
 		if (translations) {
-			headacheChart.data.labels = translations;
+			headacheChart.data.labels = translations.week;
+			headacheChart.data.datasets.forEach((dataset) => {
+				dataset.label = translations.label;
+			});
 		} else {
 			headacheChart.data.datasets.forEach((dataset) => {
 				dataset.data = data;

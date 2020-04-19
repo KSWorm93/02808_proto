@@ -4,11 +4,10 @@ $(document).ready(function () {
 	calcWeekTotalHeadache();
 })
 
-//Click functions
-var clicksWater = 0;
 function clickMeWater() {
-	clicksWater += 1;
-	document.getElementById("clicksWater").innerHTML = clicksWater;
+	var element = document.getElementById("clicksWater");
+	var currentValue = parseInt(element.innerHTML);
+	element.innerHTML = currentValue + 1;
 }
 
 function clickMeHead() {
