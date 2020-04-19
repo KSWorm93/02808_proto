@@ -62,7 +62,7 @@ function getCurrentWeekData(currentWeek) {
 	return thisWeek;
 }
 
-function getDataFromStorage(week) {
+function getDataFromStorage(week = 'week-' + moment().week()) {
 	var weekData = getCurrentWeekData(week);
 	var jsonWeekData = JSON.parse(weekData);
 
@@ -91,4 +91,8 @@ function initWeekData() {
 	}
 
 	return JSON.stringify(weekData);
+}
+
+function clearLocalStorage() {
+	localStorage.clear();
 }

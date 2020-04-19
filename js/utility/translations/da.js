@@ -1,5 +1,5 @@
 const danishLocale = {
-    welcomeText: 'Velkommen til MigraNo!',
+    welcomeText: 'Velkommen til MigraiNo!',
     weekText: 'Uge: ',
     graphText: 'Tilfælde hvor du har haft hovedpine',
     monday: 'Mandag',
@@ -10,5 +10,12 @@ const danishLocale = {
     saturday: 'Lørdag',
     sunday: 'Søndag',
     forwardBtn: 'Næste uge',
-    backBtn: 'Forrige uge'
+    backBtn: 'Forrige uge',
+    confirmBodyText: 'Er du sikker på du vil slette alt din data? Der er ingen vej tilbage',
+    confirmTitleText: 'Slet din data',
+    yes: 'Ja',
+    cancel: 'Fortryd',
+    close: 'Luk',
+    deletedTitleText: 'Success',
+    deletedBodyText: 'Alt dit data er nu slettet'
 }

@@ -17,6 +17,9 @@ function clickMeHead() {
 	element.innerHTML = currentValue + 1;
 
 	saveDataToStorage();
+	if(graphVisible()) {
+		renderGraph(getDataFromStorage());
+	}
 }
 
 function clickMeGraph() {
